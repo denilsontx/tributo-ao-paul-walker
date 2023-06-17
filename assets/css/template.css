@@ -1,0 +1,274 @@
+* {
+    font-family: Arial;
+    box-sizing: border-box; /*serve para deixar o meu elemento com o tamanho que eu defini pra ele (width: 400px; height: 400px;), ou seja, ele vai descontar o 
+    border e o padding caso tenha*/
+    font-size: 18px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #CBD7E2;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    background-color: #33485B;
+    margin-bottom: 30px;
+}
+.container { 
+    display: flex; 
+    justify-content: space-between;
+    width: 990px;
+}
+
+
+/*Como minha logo que é o texto, está em direcao a linha, se eu colocar o align itens center ele fica centralizada em coluna*/
+.logo {
+    display: flex; 
+    align-items: center;
+}
+.logo h1 {
+    padding: 5px;
+    font-family: 'Courgette';
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    font-style: normal;
+}
+/*Como meu menu que é o texto, está em direcao a linha, se eu colocar o align itens center ele fica centralizada em coluna*/
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+
+/*Aqui abaixo cuida da minha lista, tirei a estilizacao da lista, margin e o padding*/
+nav ul, 
+nav li { 
+    list-style: none; 
+    margin: 0px; 
+    padding: 0px; 
+}
+/*aqui eu fiz com que o css va no "nav" e procure o "ul" para deixar ele flex, ou seja, um item ao lado do outro*/
+nav ul {
+    display: flex; 
+}
+/*vai alterar os links "a"*/
+nav a {
+    display: block; /*faz com tenha quebra de linha, pega toda a largura da linha dele. Ele aceita margin top e bottom.	Ele aceita mudanca de largura e altura. Aceita Margin: auto*/
+    padding: 15px; /*para abrir um pouco de espaco do menu*/
+    text-decoration: none; /*para tirar o sublinhado do link*/
+    text-transform: uppercase; /*para deixar o texto todo em maiusculo*/
+    color: #727272;
+    font-family: Arial;
+    font-weight: bold;
+}
+nav .active a, /*vai procurar no "nav" a class ".active" e dentro dela vai procurar o "a" aplicar a propriedade, tbm vai vai procurar as tag "a" dentro da tag "nav" porem o como eu botei :hover ao lado do "a" ele vai aplicar quando o mouse estiver em cima */
+nav a:hover {
+    background-color: #39aae1;
+    color: #fff;
+}
+
+/*class das section para deixar elas flex e no centro da direcao delas*/
+.flex_edit {
+    display: flex;
+    justify-content: center;
+}
+
+section .img_and_text_1 {
+    display: flex;
+}
+
+/*foto de perfil*/
+article img {
+    max-width: 200px;
+    margin: 0px;
+}
+figure {
+    padding: 0px;
+    margin: 0px;
+}
+figcaption {
+    background-color: black;
+    width: 200px;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin: 0px;
+}
+.imgEdit {
+    margin-right: 20px;
+    background-color: black;
+    border: 5px solid #fff;
+    border-radius: 5px;
+}
+
+/*Area principal*/
+main h2 {
+    font-size: 30px;
+    margin: 0px;
+}
+main .title {
+    display: block;
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+main .title_bar {
+    width: 50px;
+    height: 4px;
+    background-color: #36a9e1;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+
+/*Roda pe*/
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: #253341;
+    padding: 20px;
+}
+.flex_footer {
+    border-top: 1px solid #fff;
+    display: flex;
+    padding-top: 10px;
+    color: #fff;
+}
+
+/*Aqui é botao que aparece quando está com ou menos de 670px de largura*/
+.mm_line { /*aqui cuida das linhas do botao do menu*/
+    height: 3px;
+    background-color: #39aae1;
+}
+.menuMobile { /*usando display none faz com que o item essa propriedade nao apareça, caso o botao nao vai aparecer, a nao ser que a tela tenha no maximo 600px ou menos*/
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px; /*coloquei margin top e bottom para ele deixar o header no tamanho padrao que era de 120px, o margin right era para ele nao ficar colado no lado direito da tela*/
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+
+/*Aqui é onde eu deixo o site responsivel*/
+@media (max-width:1040px) { /*aqui significa que apartir de 600px ele vai aplicar os itens que eu coloquei aqui dentro*/
+
+    .logo {
+        width: 300px;
+        padding: 10px;
+    }
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    .imgEdit {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+    main .title {
+        margin-top: 0px;
+    }
+    main .text_1 {
+        padding-left: 20px;
+    }
+    main article {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+@media (max-width:815px) { /*aqui significa que apartir de 600px ele vai aplicar os itens que eu coloquei aqui dentro*/
+
+
+    nav ul { /*vou fazer alteracoes no menu, que sao aqueles varios HOME, vou faze um botao que parece eles que nem um site normal, porem vou precissar de javascript para eu poder clicar e parecer o menu de navegacao*/
+        flex-direction: column; /*aqui eu fiz o menu ficar os itens HOME um abaixo do outro*/
+        display: none;
+        position: absolute; /*colocando isso o item se baseia na elemento pai*/
+        left: 0; /*como o ul se torno absolute, colocando left 0 ele vai para a esquerda e é empurrado 0px, ou seja nada ele ficou colado na parede*/
+        width: 100%; /*fazendo isso a ul pega 100% de toda a largura disponivel tela*/
+        background-color: #fff;
+    }
+
+    .logo {
+        width: 300px;
+        padding: 10px;
+    }
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    .imgEdit {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    main article {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .menuMobile { /*isso faz o botao aparecer quando tem uma tela de 600px ou menos*/
+        display: flex; /*coloquei isso para deixar os itens filhos no meio*/
+        flex-direction: column;
+        justify-content: space-around; /*Os itens são exibidos com espaçamento igual entre eles. Nesse meu caso ele vai divir em direcao da coluna*/
+    }
+}
+
+@media (max-width:500px) { /*aqui significa que apartir de 600px ele vai aplicar os itens que eu coloquei aqui dentro*/
+
+
+    nav ul { /*vou fazer alteracoes no menu, que sao aqueles varios HOME, vou faze um botao que parece eles que nem um site normal, porem vou precissar de javascript para eu poder clicar e parecer o menu de navegacao*/
+        flex-direction: column; /*aqui eu fiz o menu ficar os itens HOME um abaixo do outro*/
+        display: none;
+        position: absolute; /*colocando isso o item se baseia na elemento pai*/
+        left: 0; /*como o ul se torno absolute, colocando left 0 ele vai para a esquerda e é empurrado 0px, ou seja nada ele ficou colado na parede*/
+        width: 100%; /*fazendo isso a ul pega 100% de toda a largura disponivel tela*/
+        background-color: #fff;
+    }
+
+    .logo {
+        width: 300px;
+        padding: 10px;
+    }
+    .logo h1 {
+        font-size: 30px;
+    }
+
+    .imgEdit {
+        display: flex;
+        justify-content: center;
+        margin: 0px;
+    }
+    .img_and_text_1 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    main .text_1 {
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+
+    main article {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .menuMobile { /*isso faz o botao aparecer quando tem uma tela de 600px ou menos*/
+        display: flex; /*coloquei isso para deixar os itens filhos no meio*/
+        flex-direction: column;
+        justify-content: space-around; /*Os itens são exibidos com espaçamento igual entre eles. Nesse meu caso ele vai divir em direcao da coluna*/
+    }
+
+    .flex_footer {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 320px) { /*isso aqui serve para tirar aquela barra que fica sobrando na lateral direita*/
+    .container {
+     width: 100%;
+    }
+ }

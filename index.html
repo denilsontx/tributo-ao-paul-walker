@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0"/> <!--Isso serve para dizer que a é largura vai ser igual a largura do devise/dispositivo e que nao podemos dar zoom -->
+    <title>Um tributo a Paul Walker</title> <!--Isso é o titulo que fica dentro da janela no topo do site-->
+    <link rel="stylesheet" href="assets/css/normalize.css" /> <!--é uma biblioteca para padronizar os nossos comandos para os navedores (ex: Chrome e Edge), ele corrige alguns bugs que existem nas estilizações padrões dos navegadores-->
+    <link rel="stylesheet" href="assets/css/template.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        window.onload = function(){
+            document.querySelector(".menuMobile").addEventListener("click", function(){
+                if(document.querySelector(".menu nav ul").style.display == 'flex') {
+                    document.querySelector(".menu nav ul").style.display = 'none';
+                } else {
+                    document.querySelector (".menu nav ul").style.display = 'flex';
+                }
+            });
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Um tributo <br/>a Paul Walker</h1>
+            </div>
+            <div class="menu">
+                <nav>
+                    <div class="menuMobile"><!--Aqui vai ser um botao, a imagem do botao vai ser aqueles tres ponto que quando clicado abre uma aba de navegacao-->
+                        <div class="mm_line"></div><!--mm_line significa Linha do MenuMobile-->
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                    </div>
+                    <ul>
+                        <li class="active"><a href="#1">INTRODUÇÃO</a></li>
+                        <li><a href="#2">BIOGRAFIA</a></li>
+                        <li><a href="#3">CARREIRA</a></li>
+                        <li><a href="#4">MORTE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex_edit">
+        <main class="container">
+            <article>
+                <div class="img_and_text_1">
+                    <div class="imgEdit">
+                        <figure>
+                            <img src="assets/images/PaulWalkerEdit-1.jpg" alt="paul-walker"/>
+                            <figcaption><em>Walker na estreia de Fast & Furious em 2009</em></figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="text_1">
+
+                        <h2 id="1">Introdução</h2>
+                        <div class="title_bar"></div>
+
+                        <p><strong>Paul William Walker IV</strong> (Glendale, 12 de setembro de 1973 - Santa Clarita, 30 de novembro de 2013) foi um ator norte-americano. 
+                        Tornou-se conhecido em 2001, após interpretar Brian O'Conner, em <strong>The Fast and the Furious</strong>, e sua sequência, <strong>2 Fast 2 Furious</strong>. 
+                        Seus outros filmes incluem os sucessos <strong>Eight Below</strong>,<strong> Noel</strong>,<strong> Into the Blue</strong>, e<strong> Joy Ride</strong>.</p>
+                    </div>
+                </div>
+                <div class="texts_2_3_4">
+                    <span class="title" id="2">Biografia</span>
+                    <div class="title_bar"></div>
+                    
+                    <p>Paul William Walker nasceu em Glendale, Califórnia e cresceu em San Fernando Valley, arredores de Los Angeles. Filho de Paul Walker III e Cheryl, 
+                    uma ex-modelo,possui ascendência inglesa, irlandesa e alemã e foi criado como membro da <strong>Igreja de Jesus Cristo dos Santos dos Últimos Dias, ou Mórmons</strong>. 
+                    Formou-se na <strong>Village Christian School</strong> e após o colegial, frequentou diversas faculdades da comunidade, buscando uma carreira em biologia marinha.</p>
+                    <p>Walker foi eleito em 2001, pela revista <strong>People</strong>, como uma das pessoas mais bonitas do mundo. Residia em Santa Bárbara, Califórnia, com seu cachorro 
+                    da raça Chesapeake bay retriever, chamado Boone. A sua filha, <strong>Meadow Walker</strong>, que nasceu em 04 de novembro de 1998, vive no Havaí com a mãe, 
+                    uma ex-namorada de Paul. Ele era um ávido surfista e sempre foi um apaixonado por carros, antes mesmo das filmagens de Velozes e Furiosos, 
+                    possuindo um Infiniti G35.</p>
+                    <p>Paul era praticante de jiu-jitsu, possuindo a graduação de faixa marrom, e usava golpes da luta para contracenar em alguns filmes. Dizia sempre tentar colocar 
+                    um pouco da "arte suave" nos seus personagens, sua inspiração para a modalidade de luta, segundo ele, era Royce Gracie.</p>
+                    <p>Em 2010 Paul criou a fundação <strong>Reach Out Worldwide</strong> para ajudar as pessoas que haviam sofrido com algum incidente da natureza, sem ajuda do 
+                    governo e apenas com seu dinheiro.</p>
+                    
+                    <span class="title" id="3">Carreira</span>
+                    <div class="title_bar"></div>
+
+                    <p>Quando criança, Paul estrelou uma série de comerciais, entre eles o da <strong>fralda Pampers</strong>. Começou como modelo infantil aos dois anos de idade, 
+                    logo depois começou a trabalhar na TV, a partir de 1985, aos doze anos, conquistou papeis em séries de TV como, Highway to Heaven, <strong>The Young and the Restless 
+                    e Touched By an Angel</strong>. Em 1986, ganhou o seu primeiro papel no cinema, deixando de lado a carreira de modelo, que começou incentivada pela mãe, 
+                    uma ex-modelo.</p>
+                    <p>Depois, participou de <strong>Throb</strong>, <strong>em 1986</strong>, <strong>Charles in Charge (1990)</strong> e <strong>Who’s the Boss? (1991)</strong>. 
+                    A sua estreia no cinema foi em 1986, no filme <strong>O Monstro do Armário</strong>. Continuou com papéis em diversos outros filmes sem muito sucesso. Em 1998, 
+                    veio o filme <strong>Os Irmãos Id & Ota</strong>. Com esse filme ele ganhou fama. Isso levou-o a papéis de apoio nos filmes <strong>Pleasantville - A Vida em Preto 
+                    e Branco</strong>, <strong>Marcação Cerrada</strong>, <strong>Ela É Demais</strong> e <strong>Sociedade Secreta</strong>.</p>
+                    <p>Em 2001, Walker chegou ao total estrelato ao contracenar com Vin Diesel no bem sucedido filme de ação <strong>The Fast and the Furious</strong>. 
+                    O filme deu notoriedade a Walker e levou-o a fazer a sua sequência em <strong>2 Fast 2 Furious</strong>. Continuou a sua carreira com os principais papéis em 
+                    filmes como <strong>Joy Ride</strong>, <strong>Timeline</strong>, <strong>Into the Blue</strong>, e teve também um papel de apoio na adaptação de <strong>Clint Eastwood</strong>, 
+                    <strong>Flags of Our Fathers</strong> de 2006.</p>
+                    <p>Entre alguns dos seus filmes, destacam-se <strong>No Rastro da Bala</strong> e <strong>Resgate Abaixo de Zero da Walt Disney Pictures</strong>, 
+                    ambos lançados em 2006. Resgate Abaixo de Zero garantiu críticas e elogios, abrindo em primeiro lugar nas bilheterias, ultrapassando a marca dos $20 milhões 
+                    durante o seu primeiro fim de semana de estreia. Durante as filmagens de No Rastro da Bala, o diretor Wayne Kramer ficou bastante satisfeito com a atuação de 
+                    Walker no filme.</p>
+                    <p>Walker estrelou no filme independente <strong>Entre a Vida e a Morte</strong> que foi lançado em DVD em 21 de outubro de 2008. Ele posteriormente retornou 
+                    à franquia de The Fast and the Furious, retomando o seu papel em Fast & Furious, como Brian O'Conner. O filme foi lançado em 3 de abril de 2009.</p>
+                    <p>Walker estava no elenco de Takers, filme que trás Matt Dillon e Hayden Christensen. As filmagens começaram no início de setembro de 2008 e o filme teve estreia em 
+                    2010.</p>
+                    <p>Pouco antes de morrer, Walker tornou-se um cristão não-denominacional.</p>
+                    <p>Quase dois anos após sua morte, Meadow Walker, abriu processo contra a empresa Porsche por Homicídio culposo.</p>
+                    <p>A musica <strong>See You Again</strong>, do cantor <strong>Wiz Khalifa</strong> com participação de <strong>Charlie Puth</strong>, foi feita em homenagem a 
+                    Walker, além de ser a musica-tema do filme <strong>Furious 7</strong>.</p>
+
+                    <span class="title" id="4">Morte</span>
+                    <div class="title_bar"></div>
+
+                    <p>Paul Walker morreu em 30 de novembro de 2013, aos 40 anos, num acidente de carro no sul da Califórnia, nos Estados Unidos, informou o seu publicitário
+                    na conta oficial do ator no <strong>Twitter</strong> e no <strong>Facebook</strong>. "Lamentamos confirmar que o Paul morreu em um trágico acidente de carro 
+                    durante um evento beneficente para a sua organização <strong>Reach Out Worldwide</strong>", disseram os seus publicitários no Facebook. "Era o passageiro no carro 
+                    de um amigo, no qual ambos perderam a vida", acrescentaram. A notícia foi publicada inicialmente pelo site especializado em noticias sobre celebridades 
+                    <strong>TMZ</strong>. De acordo com o site, o acidente aconteceu em Santa Clarita, ao norte de Los Angeles. Fontes ligadas a Paul disseram ao site que 
+                    ele estava num Porsche que bateu num poste e em uma árvore. Em seguida o carro teria pegado fogo. Segundo o departamento de Polícia do condado de Los Angeles, 
+                    o acidente aconteceu por volta das 15h30, hora local.</p>
+
+                    <p>A hipótese de que Paul Walker, estivesse participando de um racha antes de morrer foi descartada pelo Departamento de Polícia de Los Angeles.</p>
+
+                    <p>De acordo com a autópsia, o ator morreu em decorrência de lesões traumáticas e queimaduras. Esse resultado foi divulgado no dia 4 de dezembro de 2013. 
+                    O corpo do ator foi cremado e sepultado no dia 14 de dezembro de 2013 no <strong>Forest Lawn Memorial Park</strong>, em Glendale, Califórnia, e reuniu familiares 
+                    e amigos.</p>
+                </div>
+
+            </article>
+        </main>
+    </section>
+
+    <footer>
+        <div class="container flex_footer"> <!--Aqui podemos por tambem links e tudo mais-->
+            <div>
+                Fonte: <a href="https://pt.wikipedia.org/wiki/Paul_Walker" target="_blank">Wikipédia</a>
+            </div>
+            <div>
+                Desenvolvido por: Denilson Teixeira Mendes
+            </div>
+        </div>
+    </footer>
+
+</body>   
+</html>
