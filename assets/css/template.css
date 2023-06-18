@@ -24,7 +24,7 @@ header {
 }
 
 
-/*Como minha logo que é o texto, está em direcao a linha, se eu colocar o align itens center ele fica centralizada em coluna*/
+/*Como minha logo é um texto e está em direcao a linha, se eu colocar o align itens center ele fica centralizada em coluna*/
 .logo {
     display: flex; 
     align-items: center;
@@ -36,7 +36,7 @@ header {
     border-bottom: 3px solid #fff;
     font-style: normal;
 }
-/*Como meu menu que é o texto, está em direcao a linha, se eu colocar o align itens center ele fica centralizada em coluna*/
+/*Como meu menu é um texto e está em direcao a linha, se eu colocar o align itens center ele fica centralizada em coluna*/
 .menu {
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@ section .img_and_text_1 {
     display: flex;
 }
 
-/*foto de perfil*/
+/*foto de Paul Walker*/
 article img {
     max-width: 200px;
     margin: 0px;
@@ -137,13 +137,21 @@ footer {
     padding-top: 10px;
     color: #fff;
 }
+#editing_link {
+    text-decoration: none;
+    color: #fff;
+}
+#editing_link:hover {
+    text-decoration: underline;
+    color: #0000FF;
+}
 
-/*Aqui é botao que aparece quando está com ou menos de 670px de largura*/
+/*Aqui é botao que aparece quando a largura da tela fica menor*/
 .mm_line { /*aqui cuida das linhas do botao do menu*/
     height: 3px;
     background-color: #39aae1;
 }
-.menuMobile { /*usando display none faz com que o item essa propriedade nao apareça, caso o botao nao vai aparecer, a nao ser que a tela tenha no maximo 600px ou menos*/
+.menuMobile { /*usando display none faz com que o item essa propriedade nao apareça, no caso o botao nao vai aparecer a nao ser que a tela tenha uma determinada largura ou menos*/
     display: none;
     width: 40px;
     height: 40px;
@@ -154,7 +162,7 @@ footer {
 
 
 /*Aqui é onde eu deixo o site responsivel*/
-@media (max-width:1040px) { /*aqui significa que apartir de 600px ele vai aplicar os itens que eu coloquei aqui dentro*/
+@media (max-width:1040px) { /*aqui significa que apartir de 1040px ele vai aplicar os itens que eu coloquei aqui dentro*/
 
     .logo {
         width: 300px;
@@ -181,10 +189,10 @@ footer {
     }
 }
 
-@media (max-width:815px) { /*aqui significa que apartir de 600px ele vai aplicar os itens que eu coloquei aqui dentro*/
+@media (max-width:815px) { 
 
 
-    nav ul { /*vou fazer alteracoes no menu, que sao aqueles varios HOME, vou faze um botao que parece eles que nem um site normal, porem vou precissar de javascript para eu poder clicar e parecer o menu de navegacao*/
+    nav ul { /*vou fazer alteracoes no menu, que sao aqueles varios HOME, vou faze um botao que parece eles que nem um site normal, porem vou precisar de javascript para eu poder clicar e parecer o menu de navegacao*/
         flex-direction: column; /*aqui eu fiz o menu ficar os itens HOME um abaixo do outro*/
         display: none;
         position: absolute; /*colocando isso o item se baseia na elemento pai*/
@@ -211,14 +219,14 @@ footer {
         flex-direction: column;
         padding: 10px;
     }
-    .menuMobile { /*isso faz o botao aparecer quando tem uma tela de 600px ou menos*/
+    .menuMobile { /*isso faz o botao aparecer quando tem uma tela de 815px ou menos*/
         display: flex; /*coloquei isso para deixar os itens filhos no meio*/
         flex-direction: column;
         justify-content: space-around; /*Os itens são exibidos com espaçamento igual entre eles. Nesse meu caso ele vai divir em direcao da coluna*/
     }
 }
 
-@media (max-width:500px) { /*aqui significa que apartir de 600px ele vai aplicar os itens que eu coloquei aqui dentro*/
+@media (max-width:500px) { 
 
 
     nav ul { /*vou fazer alteracoes no menu, que sao aqueles varios HOME, vou faze um botao que parece eles que nem um site normal, porem vou precissar de javascript para eu poder clicar e parecer o menu de navegacao*/
@@ -257,18 +265,13 @@ footer {
         flex-direction: column;
         padding: 10px;
     }
-    .menuMobile { /*isso faz o botao aparecer quando tem uma tela de 600px ou menos*/
-        display: flex; /*coloquei isso para deixar os itens filhos no meio*/
-        flex-direction: column;
-        justify-content: space-around; /*Os itens são exibidos com espaçamento igual entre eles. Nesse meu caso ele vai divir em direcao da coluna*/
-    }
 
     .flex_footer {
         flex-wrap: wrap;
     }
 }
-@media (max-width: 320px) { /*isso aqui serve para tirar aquela barra que fica sobrando na lateral direita*/
+@media (max-width: 320px) {
     .container {
-     width: 100%;
+     width: 100%;  /*isso aqui serve para tirar aquela barra que fica sobrando na lateral direita*/
     }
  }
